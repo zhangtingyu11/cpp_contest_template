@@ -1,0 +1,21 @@
+{
+    "clangd.fallbackFlags": [
+        "-I${workspaceFolder}/include"
+    ],
+    "clangd.arguments": [
+        "--log=verbose",
+        "--pretty",
+        "--all-scopes-completion",
+        "--completion-style=detailed",
+        "--cross-file-rename",
+        "--header-insertion=iwyu",
+        "--header-insertion-decorators",
+        "--background-index",
+        "--clang-tidy",
+        "-j=12",
+        "--pch-storage=disk",
+        "--function-arg-placeholders=false",
+        "--ranking-model=heuristics",
+        "--query-driver=/usr/bin/g++"
+    ],
+}

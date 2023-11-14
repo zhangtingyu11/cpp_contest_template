@@ -1,0 +1,16 @@
+{
+    "configurations": [
+        {
+            "name": "Your Configuration Name",
+            "includePath": [
+                "${workspaceFolder}/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/use/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64"
+        }
+    ],
+    "version": 4
+}
