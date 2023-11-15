@@ -10,31 +10,22 @@
  */
 
 #include "mathematic/fast_power.hpp"
-int fast_power(int a, int b){
-    if(a==0){
-        return 0;
-    }
-    int res = 1;
-    while(b){
-        if(b & 1){
-            res *= a;
-        }
-        a *= a;
+long long fast_power(long long a, long long b){
+    long long res = 1;
+    while(b > 0){
+        if (b & 1) res = res * a;
+        a = a * a;
         b >>= 1;
     }
     return res;
 }
 
 long long fast_power_mod_p(long long a, long long b, long long p){
-    if(a==0){
-        return 0;
-    }
+    a %= p;
     long long res = 1;
-    while(b){
-        if(b & 1){
-            res = (res * a) % p;
-        }
-        a = (a * a) % p;
+    while(b>0){
+        if(b&1) res = res * a % p;
+        a = a * a % p;
         b >>= 1;
     }
     return res;

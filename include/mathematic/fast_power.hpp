@@ -4,9 +4,9 @@
  * 
  * @param a 底数
  * @param b 指数
- * @return int pow(a, b)的值
+ * @return long long pow(a, b)的值
  */
-int fast_power(int a, int b);
+long long fast_power(long long a, long long b);
 
 /**
  * @brief 快速计算pow(a, b) mod p
