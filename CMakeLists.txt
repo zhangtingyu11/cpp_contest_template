@@ -18,5 +18,11 @@ enable_testing()
 include_directories("${PROJECT_PATH}/include")
 
 add_subdirectory(src/mathematic)
+add_subdirectory(src/basic)
+add_subdirectory(src/common)
+
+
 add_subdirectory(test/mathematic)
+add_subdirectory(test/basic)
+
 
