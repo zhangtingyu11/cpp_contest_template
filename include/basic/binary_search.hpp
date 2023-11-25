@@ -45,3 +45,24 @@ double sqrt_x_with_eps(int x, double eps);
  */
 double sqrt_x_with_loop(int x);
 
+
+/**
+ * @brief 找到单峰函数取最大值时候的输入值, 单峰函数指只有一个最大值, 且在最大值左边严格单调递增, 在最大值右边严格单调递减
+ * 
+ * @param func 单峰函数
+ * @param eps 误差
+ * @return double 取到最大值的输入值
+ */
+double find_max_of_single_max_function(double (*func)(double x), double eps);
+
+/**
+ * @brief 找到单谷函数取最小值时候的输入值, 单谷函数指只有一个最小值, 且在最小值左边严格单调递减, 在最大值右边严格单调递增
+ * 
+ * @param func 单谷函数
+ * @param eps 误差
+ * @return double 渠道最小值的输入值
+ */
+double find_min_of_single_min_function(double (*func)(double x), double eps);
+
+
+

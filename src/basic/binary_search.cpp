@@ -61,5 +61,40 @@ double sqrt_x_with_loop(int x){
     return l;
 }
 
+double find_max_of_single_max_function(double (*func)(double x), double eps){
+    double l = 0.0l;
+    double r = 1e9l;
+    while(l+eps < r){
+        double mid = (l+r)/2;
+        double lmid = mid-eps/2;
+        double rmid = mid+eps/2;
+        if(func(lmid) >= func(rmid)){ //这种情况, 要么都在最大点右边, 要么在两侧, 肯定在rmid的左边
+            r = rmid;
+        }
+        else{   //这种情况, 要么都在最大点左边, 要么在两侧, 肯定在lmid的右边
+            l = lmid; 
+        }
+    }
+    return l;
+}
+
+double find_min_of_single_min_function(double (*func)(double x), double eps){
+    double l = 0.0l;
+    double r = 1e9l;
+    while(l+eps < r){
+        double mid = (l+r)/2;
+        double lmid = mid-eps/2;
+        double rmid = mid+eps/2;
+        if(func(lmid) >= func(rmid)){ //这种情况, 要么都在最小点左边, 要么在两侧, 肯定在lmid的右边
+            l = lmid;
+        }
+        else{   //这种情况, 要么都在最小点右边, 要么在两侧, 肯定在rmid的左边
+            r = rmid; 
+        }
+    }
+    return l;
+}
+
+
 
 
