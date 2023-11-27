@@ -49,7 +49,7 @@ double sqrt_x_with_eps(int x, double eps){
 double sqrt_x_with_loop(int x){
     double l = 0.0l;
     double r = (double) x;
-    for(int i=0; i<100l; i++){
+    for(int i=0; i<100; i++){
         double mid = (l + r) / 2;
         if(mid*mid>=x){
             r = mid;
